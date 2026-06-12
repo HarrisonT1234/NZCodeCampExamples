@@ -61,18 +61,18 @@ public class Drivetrain {
     }
 
     // drive with driver oriented
-    public void driveDriverOriented(double driveDriverOriented,double strafeDriverOriented,double turn,double speed,double heading){
+    public void driveDriverOriented(double fieldDrive,double fieldStrafe,double turn,double speed,double heading){
         // equation using trigonometry to figure out the correct drive and strafe values based on the heading
 
         // these values are for the robot
-        double drive = Math.cos(Math.toRadians(heading))*strafeDriverOriented - Math.sin(Math.toRadians(heading))*driveDriverOriented;
-        double strafe = Math.sin(Math.toRadians(heading))*strafeDriverOriented - Math.cos(Math.toRadians(heading))*driveDriverOriented;
+        double botDrive = Math.sin(Math.toRadians(-heading))*fieldStrafe + Math.cos(Math.toRadians(-heading))*fieldDrive;
+        double botStrafe = Math.cos(Math.toRadians(-heading))*fieldStrafe - Math.sin(Math.toRadians(-heading))*fieldDrive;
 
         // mecanum equation again
-        fl.setPower((drive + strafe + turn)*speed);
-        fr.setPower((drive - strafe - turn)*speed);
-        bl.setPower((drive - strafe + turn)*speed);
-        br.setPower((drive + strafe - turn)*speed);
+        fl.setPower((botDrive + botStrafe + turn)*speed);
+        fr.setPower((botDrive - botStrafe - turn)*speed);
+        bl.setPower((botDrive - botStrafe + turn)*speed);
+        br.setPower((botDrive + botStrafe - turn)*speed);
 
     }
 }
