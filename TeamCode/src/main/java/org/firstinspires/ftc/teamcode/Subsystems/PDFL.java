@@ -46,11 +46,11 @@ public class PDFL {
     if you are using it, tune feedforward until the slides are just barely moving up. then lower it slowly until they stop.
     if you are using slides, then set them to the middle position and tune lower limit.
     first increase lower limit until the motors are moving slowly. while doing this set proportional to be
-    very very small, like 0.0000001.
+    very, very small, like 0.0000001.
     then do proportional which really matters. you want to increase proportional until the motors get to the place you want,
     then keep adjusting proportional while changing the position you want to go to. the higher proportional is, the faster
-    it will get to the desired position yet it will also make it overshoot around the point. the lower proportional is, the
-    less it overshoots yet it gets to the position slower. the intent is to make the proportional to go to the target as fast
+    it will get to the desired position, yet it will also make it overshoot around the point. the lower proportional is, the
+    less it overshoots, yet it gets to the position slower. the intent is to make the proportional to go to the target as fast
     as possible without over shooting and oscillating too much.
     then tune deadzone. you want the deadzone to start at 0 and increase it slowly until the motor does not oscillate around the target position.
     Lastly tune derivative, slowly increase derivative until the motor smoothly gets to is desired position. the goal of

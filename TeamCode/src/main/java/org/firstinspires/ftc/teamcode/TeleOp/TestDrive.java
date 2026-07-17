@@ -17,8 +17,10 @@ public class TestDrive extends OpMode {
     }
     public void loop(){
         movement.update();
+
+        // you should not run both of these at the same time
         // drive robot oriented
-//        dt.drive(gamepad1.left_stick_y,-gamepad1.left_stick_x, -gamepad1.right_stick_x, 1);
+        dt.drive(gamepad1.left_stick_y,-gamepad1.left_stick_x, -gamepad1.right_stick_x, 1);
         // drive driver oriented
         dt.driveDriverOriented(gamepad1.left_stick_y,-gamepad1.left_stick_x, -gamepad1.right_stick_x, 1, movement.getHeading());
     }

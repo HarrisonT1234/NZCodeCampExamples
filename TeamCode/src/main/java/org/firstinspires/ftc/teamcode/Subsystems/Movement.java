@@ -46,7 +46,7 @@ public class Movement {
         // initialize the PDFL
         pdfl = new PDFL();
         // initializes the odo pods through the pinpoint
-        pinpoint = hardware.get(GoBildaPinpointDriver.class, "odo_pods");
+        pinpoint = hardware.get(GoBildaPinpointDriver.class, "odo");
         // sets the pinpoint offsets, these need to be tuned
         pinpoint.setOffsets(offsetX, offsetY,MM);
         // these set up the pinpoint and odo pod.

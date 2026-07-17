@@ -31,7 +31,7 @@ public class PDFL_Tuning extends OpMode {
         telemetry.addData("y position",movement.getY());
         telemetry.addData("heading",movement.getHeading());
         telemetry.update();
-        // this is to run the go to position software to go to the positions you can chang in dash
+        // this is to run the goto position software to go to the positions you can change in dash
         // make sure to tune turn first, then drive and strafe.
         movement.goToPosition(targetX,targetY,targetHeading,1);
     }

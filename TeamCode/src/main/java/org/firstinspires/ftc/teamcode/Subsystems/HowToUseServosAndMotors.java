@@ -28,7 +28,7 @@ public class HowToUseServosAndMotors {
         // run without encoder is for a system that you do not need to go to precise locations, like an intake or the drive wheels
         testMotor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         // motors are automatically set to run with their encoders, so here you just need to stop and reset the encoder.
-        // this will make sure that the place the motor is currently at is 0 and it will start counting from there.
+        // this will make sure that the place the motor is currently at is 0, and it will start counting from there.
         // linear/horizontal slides are great uses of the motor encoders.
         testMotor2.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
